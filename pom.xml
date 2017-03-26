@@ -214,7 +214,7 @@
                 <configuration>
                     <javaApiLinks>
                         <property>
-                            <shape>api_1.8</shape>
+                            <name>api_1.8</name>
                             <value>http://docs.oracle.com/javase/8/docs/api/</value>
                         </property>
                     </javaApiLinks>
