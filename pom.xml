@@ -4,18 +4,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.coveros.blog</groupId>
-    <artifactId>object</artifactId>
+    <groupId>com.coveros</groupId>
+    <artifactId>shapes</artifactId>
     <version>0.1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>Object Exmaples</name>
+    <name>Object Examples</name>
     <description>Some examples of objects.</description>
     <url>https://www.coveros.com/</url>
     <inceptionYear>2017</inceptionYear>
 
     <prerequisites>
-        <maven>3.0.0</maven>
+        <maven>3.1</maven>
     </prerequisites>
 
     <properties>
@@ -24,37 +24,53 @@
         <pmd.cpd.minimumTokens>50</pmd.cpd.minimumTokens>
         <jdk.version>1.8</jdk.version>
 
-        <maven.clean.plugin.version>2.5</maven.clean.plugin.version>
-        <maven.resources.plugin.version>2.6</maven.resources.plugin.version>
-        <maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
-        <maven.surefire.plugin.version>2.17</maven.surefire.plugin.version>
-        <jacoco.maven.plugin.version>0.7.1.201405082137</jacoco.maven.plugin.version>
-        <maven.jar.plugin.version>2.5</maven.jar.plugin.version>
-        <maven.install.plugin.version>2.5.1</maven.install.plugin.version>
-        <maven.deploy.plugin.version>2.8.1</maven.deploy.plugin.version>
-        <maven.checkstyle.plugin.version>2.12.1</maven.checkstyle.plugin.version>
-        <findbugs.maven.plugin.version>2.5.4</findbugs.maven.plugin.version>
-        <maven.pmd.plugin.version>3.1</maven.pmd.plugin.version>
+        <maven.clean.plugin.version>3.0.0</maven.clean.plugin.version>
+        <maven.resources.plugin.version>3.0.2</maven.resources.plugin.version>
+        <maven.compiler.plugin.version>3.6.1</maven.compiler.plugin.version>
+        <maven.surefire.plugin.version>2.19.1</maven.surefire.plugin.version>
+        <jacoco.maven.plugin.version>0.7.9</jacoco.maven.plugin.version>
+        <maven.jar.plugin.version>3.0.2</maven.jar.plugin.version>
+        <maven.install.plugin.version>2.5.2</maven.install.plugin.version>
+        <maven.deploy.plugin.version>2.8.2</maven.deploy.plugin.version>
+        <maven.checkstyle.plugin.version>2.17</maven.checkstyle.plugin.version>
+        <findbugs.maven.plugin.version>3.0.4</findbugs.maven.plugin.version>
+        <maven.pmd.plugin.version>3.7</maven.pmd.plugin.version>
 
-        <maven.site.plugin.version>3.4</maven.site.plugin.version>
-        <maven.project.info.reports.plugin.version>2.7</maven.project.info.reports.plugin.version>
-        <maven.dependency.plugin.version>2.8</maven.dependency.plugin.version>
-        <maven.versions.version>2.1</maven.versions.version>
-        <maven.source.plugin.version>2.3</maven.source.plugin.version>
-        <maven.javadoc.plugin.version>2.9.1</maven.javadoc.plugin.version>
-        <maven.jxr.plugin.version>2.4</maven.jxr.plugin.version>
+        <maven.site.plugin.version>3.6</maven.site.plugin.version>
+        <maven.project.info.reports.plugin.version>2.9</maven.project.info.reports.plugin.version>
+        <maven.dependency.plugin.version>3.0.0</maven.dependency.plugin.version>
+        <maven.versions.version>2.3</maven.versions.version>
+        <maven.source.plugin.version>3.0.1</maven.source.plugin.version>
+        <maven.javadoc.plugin.version>2.10.4</maven.javadoc.plugin.version>
+        <maven.jxr.plugin.version>2.5</maven.jxr.plugin.version>
         <maven.jdepend.version>2.0</maven.jdepend.version>
-        <dependency.check.maven.version>1.2.4</dependency.check.maven.version>
-        <lint.maven.plugin.version>0.0.8</lint.maven.plugin.version>
+        <dependency.check.maven.version>1.4.5</dependency.check.maven.version>
+        <lint.maven.plugin.version>0.0.11</lint.maven.plugin.version>
+        <pitest.version>1.1.11</pitest.version>
 
-        <junit.version>4.11</junit.version>
+        <commons.lang3.version>3.5</commons.lang3.version>
+
+        <junit.version>4.12</junit.version>
+        <equalsverifier.version>2.2.1</equalsverifier.version>
     </properties>
 
     <dependencies>
         <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons.lang3.version}</version>
+        </dependency>
+
+        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>nl.jqno.equalsverifier</groupId>
+            <artifactId>equalsverifier</artifactId>
+            <version>${equalsverifier.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -165,14 +181,16 @@
                 <groupId>org.owasp</groupId>
                 <artifactId>dependency-check-maven</artifactId>
                 <version>${dependency.check.maven.version}</version>
-                <configuration>
-                    <logFile>${project.build.directory}/dep-check.log</logFile>
-                </configuration>
             </plugin>
             <plugin>
                 <groupId>com.lewisd</groupId>
                 <artifactId>lint-maven-plugin</artifactId>
                 <version>${lint.maven.plugin.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.pitest</groupId>
+                <artifactId>pitest-maven</artifactId>
+                <version>${pitest.version}</version>
             </plugin>
         </plugins>
     </build>
