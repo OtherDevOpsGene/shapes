@@ -61,3 +61,8 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+# Visual Studio Code settings
+.vscode/
+.settings/
+.classpath
+.project

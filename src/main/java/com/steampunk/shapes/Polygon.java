@@ -1,4 +1,4 @@
-package com.coveros.shapes;
+package com.steampunk.shapes;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;

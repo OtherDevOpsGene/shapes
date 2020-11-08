@@ -1,4 +1,4 @@
-package com.coveros.shapes;
+package com.steampunk.shapes;
 
 import nl.jqno.equalsverifier.EqualsVerifier;
 import org.junit.Rule;
