@@ -1,4 +1,4 @@
-package com.coveros.shapes;
+package com.steampunk.shapes;
 
 import java.util.List;
 
