@@ -1,1 +1,42 @@
-java_version: 11
+#   # Define settings for Java analysis
+#   ####################################
+#   java:
+#     # The `prepare` step exists for customization on LGTM.com only.
+#     prepare:
+#     # Add an `after-prepare` step if you need to run commands after the prepare step.
+#     # Each command should be listed on a separate line.
+#     after_prepare:
+#       - export PATH=$LGTM_WORKSPACE/tools:$PATH
+#     # The `index` step extracts information from the files in the codebase.
+#     index:
+#       # Specify Gradle settings.
+#       gradle:
+#         # Specify the required Gradle version.
+#         # Default: determined automatically.
+#         version: 4.4
+#       # Override the autobuild process by specifying a list of custom build commands
+#       # to use instead.
+#       build_command: ./compile-all.sh
+#       # Specify the Java version required to build the project.
+#       java_version: 11
+#       # Specify Maven settings.
+#       maven:
+#         # Specify the path (absolute or relative) of a Maven settings file to use.
+#         # Default: Maven uses a settings file in the default location, if it exists.
+#         settings_file: /opt/share/settings.xml
+#         # Specify the path of a Maven toolchains file.
+#         # Default: Maven uses a toolchains file in the default location, if it exists.
+#         toolchains_file: /opt/share/toolchains.xml
+#         # Specify the required Maven version.
+#         # Default: the Maven version is determined automatically, where feasible.
+#         version: 3.5.2
+#       # Specify how XML files should be extracted:
+#       #   ALL = extract all XML files.
+#       #   DEFAULT = only extract XML files named `AndroidManifest.xml`.
+#       #   DISABLED = do not extract any XML files.
+#       xml_mode: ALL
+
+extraction:
+  java:
+    index:
+      java_version: 11
