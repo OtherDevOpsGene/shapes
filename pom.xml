@@ -46,13 +46,13 @@
         <dependency.check.maven.version>6.0.3</dependency.check.maven.version>
         <lint.maven.plugin.version>0.0.11</lint.maven.plugin.version>
         <pitest.maven.version>1.5.2</pitest.maven.version>
-        <pitest.junit5.plugin.version>0.12</pitest.junit5.plugin.version>
+        <pitest.junit5.plugin.version>0.14</pitest.junit5.plugin.version>
         <com.google.errorprone.version>2.3.4</com.google.errorprone.version>
 
         <commons.lang3.version>3.12.0</commons.lang3.version>
 
         <junit.version>5.7.1</junit.version>
-        <equalsverifier.version>3.5</equalsverifier.version>
+        <equalsverifier.version>3.6</equalsverifier.version>
     </properties>
 
     <dependencyManagement>
