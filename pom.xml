@@ -52,7 +52,7 @@
         <commons.lang3.version>3.12.0</commons.lang3.version>
 
         <junit.version>5.7.1</junit.version>
-        <equalsverifier.version>3.6</equalsverifier.version>
+        <equalsverifier.version>3.6.1</equalsverifier.version>
     </properties>
 
     <dependencyManagement>
