@@ -4,14 +4,13 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.steampunk</groupId>
+    <groupId>dev.otherdevopsgene</groupId>
     <artifactId>shapes</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>Shapes</name>
     <description>Some examples of objects.</description>
-    <url>https://www.steampunk.com/</url>
     <inceptionYear>2017</inceptionYear>
 
     <properties>
@@ -19,35 +18,33 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <pmd.cpd.minimumTokens>50</pmd.cpd.minimumTokens>
 
-        <java.version>11</java.version>
-        <maven.version>3.3.9</maven.version>
+        <java.version>21</java.version>
+        <maven.version>3.6.3</maven.version>
 
-        <maven.clean.plugin.version>3.1.0</maven.clean.plugin.version>
-        <maven.resources.plugin.version>3.2.0</maven.resources.plugin.version>
-        <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
-        <maven.surefire.plugin.version>2.22.2</maven.surefire.plugin.version>
-        <jacoco.maven.plugin.version>0.8.6</jacoco.maven.plugin.version>
-        <maven.jar.plugin.version>3.2.0</maven.jar.plugin.version>
-        <maven.install.plugin.version>2.5.2</maven.install.plugin.version>
-        <maven.deploy.plugin.version>2.8.2</maven.deploy.plugin.version>
-        <maven.checkstyle.plugin.version>3.1.1</maven.checkstyle.plugin.version>
-        <spotbugs.maven.plugin.version>4.1.4</spotbugs.maven.plugin.version>
-        <maven.pmd.plugin.version>3.13.0</maven.pmd.plugin.version>
-        <maven.enforcer.plugin.version>3.0.0-M3</maven.enforcer.plugin.version>
+        <maven.clean.plugin.version>3.4.0</maven.clean.plugin.version>
+        <maven.resources.plugin.version>3.3.1</maven.resources.plugin.version>
+        <maven.compiler.plugin.version>3.13.0</maven.compiler.plugin.version>
+        <maven.surefire.plugin.version>3.3.1</maven.surefire.plugin.version>
+        <jacoco.maven.plugin.version>0.8.12</jacoco.maven.plugin.version>
+        <maven.jar.plugin.version>3.4.2</maven.jar.plugin.version>
+        <maven.install.plugin.version>3.1.2</maven.install.plugin.version>
+        <maven.deploy.plugin.version>3.1.2</maven.deploy.plugin.version>
+        <maven.checkstyle.plugin.version>3.4.0</maven.checkstyle.plugin.version>
+        <spotbugs.maven.plugin.version>4.8.6.2</spotbugs.maven.plugin.version>
+        <maven.pmd.plugin.version>3.23.0</maven.pmd.plugin.version>
+        <maven.enforcer.plugin.version>3.5.0</maven.enforcer.plugin.version>
 
-        <maven.site.plugin.version>3.9.1</maven.site.plugin.version>
-        <maven.project.info.reports.plugin.version>3.1.1</maven.project.info.reports.plugin.version>
-        <maven.dependency.plugin.version>3.1.2</maven.dependency.plugin.version>
-        <maven.versions.version>2.8.1</maven.versions.version>
-        <maven.source.plugin.version>3.2.1</maven.source.plugin.version>
-        <maven.javadoc.plugin.version>3.2.0</maven.javadoc.plugin.version>
-        <maven.jxr.plugin.version>3.0.0</maven.jxr.plugin.version>
+        <maven.site.plugin.version>4.0.0-M15</maven.site.plugin.version>
+        <maven.project.info.reports.plugin.version>3.6.1</maven.project.info.reports.plugin.version>
+        <maven.dependency.plugin.version>3.7.1</maven.dependency.plugin.version>
+        <maven.versions.version>2.17.0</maven.versions.version>
+        <maven.source.plugin.version>3.3.1</maven.source.plugin.version>
+        <maven.javadoc.plugin.version>3.7.0</maven.javadoc.plugin.version>
+        <maven.jxr.plugin.version>3.4.0</maven.jxr.plugin.version>
         <maven.jdepend.version>2.0</maven.jdepend.version>
-        <dependency.check.maven.version>6.0.3</dependency.check.maven.version>
-        <lint.maven.plugin.version>0.0.11</lint.maven.plugin.version>
-        <pitest.maven.version>1.5.2</pitest.maven.version>
+        <dependency.check.maven.version>10.0.2</dependency.check.maven.version>
+        <pitest.maven.version>1.16.1</pitest.maven.version>
         <pitest.junit5.plugin.version>0.14</pitest.junit5.plugin.version>
-        <com.google.errorprone.version>2.3.4</com.google.errorprone.version>
 
         <commons.lang3.version>3.12.0</commons.lang3.version>
 
@@ -118,17 +115,6 @@
                     <configuration>
                         <source>${java.version}</source>
                         <target>${java.version}</target>
-                        <compilerArgs>
-                            <arg>-XDcompilePolicy=simple</arg>
-                            <arg>-Xplugin:ErrorProne</arg>
-                        </compilerArgs>
-                        <annotationProcessorPaths>
-                            <path>
-                                <groupId>com.google.errorprone</groupId>
-                                <artifactId>error_prone_core</artifactId>
-                                <version>${com.google.errorprone.version}</version>
-                            </path>
-                        </annotationProcessorPaths>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -212,20 +198,6 @@
                     <version>${dependency.check.maven.version}</version>
                 </plugin>
                 <plugin>
-                    <groupId>com.lewisd</groupId>
-                    <artifactId>lint-maven-plugin</artifactId>
-                    <version>${lint.maven.plugin.version}</version>
-                    <executions>
-                        <execution>
-                            <id>pom-lint</id>
-                            <phase>validate</phase>
-                            <goals>
-                                <goal>check</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
-                <plugin>
                     <groupId>org.pitest</groupId>
                     <artifactId>pitest-maven</artifactId>
                     <version>${pitest.maven.version}</version>
@@ -302,8 +274,8 @@
                 <configuration>
                     <javaApiLinks>
                         <property>
-                            <name>api_11</name>
-                            <value>https://docs.oracle.com/en/java/javase/11/docs/</value>
+                            <name>api_21</name>
+                            <value>https://docs.oracle.com/en/java/javase/21/docs/</value>
                         </property>
                     </javaApiLinks>
                 </configuration>
@@ -387,15 +359,11 @@
             <distribution>manual</distribution>
         </license>
     </licenses>
-    <organization>
-        <name>Steampunk</name>
-        <url>https://www.steampunk.com/</url>
-    </organization>
     <developers>
         <developer>
             <id>OtherDevOpsGene</id>
             <name>Gene Gotimer</name>
-            <email>eugene.gotimer@steampunk.com</email>
+            <email>otherdevopsgene@portinfo.com</email>
         </developer>
     </developers>
 
