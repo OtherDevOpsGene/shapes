@@ -1,4 +1,4 @@
-package com.steampunk.shapes;
+package dev.otherdevopsgene.shapes;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotSame;

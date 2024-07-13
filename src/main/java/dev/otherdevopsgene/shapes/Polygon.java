@@ -1,4 +1,4 @@
-package com.steampunk.shapes;
+package dev.otherdevopsgene.shapes;
 
 import java.util.ArrayList;
 import java.util.Collections;
