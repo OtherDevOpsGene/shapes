@@ -44,12 +44,12 @@
         <maven.jdepend.version>2.0</maven.jdepend.version>
         <dependency.check.maven.version>10.0.2</dependency.check.maven.version>
         <pitest.maven.version>1.16.1</pitest.maven.version>
-        <pitest.junit5.plugin.version>0.14</pitest.junit5.plugin.version>
+        <pitest.junit5.plugin.version>1.2.1</pitest.junit5.plugin.version>
 
-        <commons.lang3.version>3.12.0</commons.lang3.version>
+        <commons.lang3.version>3.14.0</commons.lang3.version>
 
-        <junit.version>5.7.1</junit.version>
-        <equalsverifier.version>3.6</equalsverifier.version>
+        <junit.version>5.11.0-M2</junit.version>
+        <equalsverifier.version>3.16.1</equalsverifier.version>
     </properties>
 
     <dependencyManagement>
