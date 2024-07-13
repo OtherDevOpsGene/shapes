@@ -41,8 +41,6 @@
         <maven.source.plugin.version>3.3.1</maven.source.plugin.version>
         <maven.javadoc.plugin.version>3.7.0</maven.javadoc.plugin.version>
         <maven.jxr.plugin.version>3.4.0</maven.jxr.plugin.version>
-        <maven.jdepend.version>2.0</maven.jdepend.version>
-        <dependency.check.maven.version>10.0.2</dependency.check.maven.version>
         <pitest.maven.version>1.16.1</pitest.maven.version>
         <pitest.junit5.plugin.version>1.2.1</pitest.junit5.plugin.version>
 
@@ -193,11 +191,6 @@
                     <version>${maven.javadoc.plugin.version}</version>
                 </plugin>
                 <plugin>
-                    <groupId>org.owasp</groupId>
-                    <artifactId>dependency-check-maven</artifactId>
-                    <version>${dependency.check.maven.version}</version>
-                </plugin>
-                <plugin>
                     <groupId>org.pitest</groupId>
                     <artifactId>pitest-maven</artifactId>
                     <version>${pitest.maven.version}</version>
@@ -248,10 +241,6 @@
             <plugin>
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.owasp</groupId>
-                <artifactId>dependency-check-maven</artifactId>
             </plugin>
             <plugin>
                 <groupId>org.pitest</groupId>
@@ -316,11 +305,6 @@
                 <version>${spotbugs.maven.plugin.version}</version>
             </plugin>
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>jdepend-maven-plugin</artifactId>
-                <version>${maven.jdepend.version}</version>
-            </plugin>
-            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
                 <version>${maven.pmd.plugin.version}</version>
@@ -344,18 +328,13 @@
                     </reportSet>
                 </reportSets>
             </plugin>
-            <plugin>
-                <groupId>org.owasp</groupId>
-                <artifactId>dependency-check-maven</artifactId>
-                <version>${dependency.check.maven.version}</version>
-            </plugin>
         </plugins>
     </reporting>
 
     <licenses>
         <license>
             <name>Attribution-NonCommercial-ShareAlike 4.0 International</name>
-            <url>http://creativecommons.org/licenses/by-nc-sa/4.0/</url>
+            <url>https://creativecommons.org/licenses/by-nc-sa/4.0/</url>
             <distribution>manual</distribution>
         </license>
     </licenses>
