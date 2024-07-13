@@ -1,6 +1,5 @@
 # Shapes
 
-[![Build Status](https://travis-ci.org/OtherDevOpsGene/shapes.svg?branch=main)](https://travis-ci.org/OtherDevOpsGene/shapes)
 [![Maintainability](https://api.codeclimate.com/v1/badges/a1a22e2af90123c92937/maintainability)](https://codeclimate.com/github/OtherDevOpsGene/shapes/maintainability)
 
 Sample object-oriented Java code, showing the classical example of a few shapes.
